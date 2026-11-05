@@ -1,0 +1,18 @@
+class Pets:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
+    def greet(self):
+        print(f'моего питомца зовут {self.name} и ему {self.age}')
+
+class Cats(Pets):
+    def __init__(self,name,age,species):
+        super().__init__(name,age)
+        self.species=species
+    def poroda(self):
+        print(f"его порода - {self.species}")
+
+kety=Cats("Kety",13, "шотландская вислоухая")
+kety.greet()
+kety.poroda()
